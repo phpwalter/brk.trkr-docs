@@ -1,0 +1,43 @@
+canonical_language: en
+
+required_root_paths:
+  - docs/README.md
+  - docs/i18n/README.md
+  - docs/i18n/en/README.md
+  - docs/i18n/en/INDEX.md
+
+required_sections:
+  - product
+  - architecture
+  - development
+
+frontmatter:
+  required:
+    - title
+    - lang
+    - translation_key
+    - status
+  allowed_status:
+    - draft
+    - authoritative
+    - research
+    - deprecated
+    - historical
+    - traceability
+
+translation:
+  require_mirrored_paths: true
+  require_language_readme: true
+
+indexing:
+  statuses_requiring_index:
+    - authoritative
+  exempt_filenames:
+    - README.md
+    - INDEX.md
+
+links:
+  forbidden_internal_fragments:
+    - docs2/
+    - _old/
+    - google.com/search?q=#
