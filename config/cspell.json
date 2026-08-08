@@ -1,0 +1,32 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "useGitignore": true,
+  "files": ["docs/**/*.md"],
+  "ignorePaths": ["docs/i18n/*/SOURCE-MAP.md"],
+  "words": [
+    "Brk",
+    "Trkr",
+    "BrickLink",
+    "Rebrickable",
+    "LEGO",
+    "minifigure",
+    "minifigures",
+    "MOC",
+    "MOCs",
+    "OpenAPI",
+    "PostgreSQL",
+    "UUID",
+    "UUIDs",
+    "RLS",
+    "i18n",
+    "frontmatter",
+    "cross-cutting",
+    "multi-tenant",
+    "tenant",
+    "tenancy",
+    "catalog",
+    "valuation",
+    "observability"
+  ]
+}

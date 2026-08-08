@@ -1,25 +1,29 @@
 # Brk-Trkr Documentation
 
-This directory is the canonical documentation root for Brk-Trkr.
+Brk-Trkr documentation is organized as a language-neutral root with language-specific documentation beneath `i18n/`.
 
-The documentation is organized around three primary concerns:
+## Languages
 
-- [Product](./product/) — what Brk-Trkr is, why it exists, its terminology, capabilities, and domain behavior.
-- [Architecture](./architecture/) — how Brk-Trkr is designed, including system structure, domain boundaries, data, APIs, security, integrations, and operational architecture.
-- [Development](./development/) — how engineers work on Brk-Trkr, including repositories, local setup, engineering standards, testing, and contribution workflows.
+- [English](./i18n/en/README.md) (`en`) — authoritative source language
 
-## Documentation principles
+## Translation model
 
-1. Organize authoritative documentation by subject, not by implementation artifact or historical document type.
-2. Describe the current system state in the primary documentation.
-3. Record significant architectural decisions separately as Architecture Decision Records (ADRs) when appropriate.
-4. Preserve superseded designs, research, and implementation history outside the authoritative documentation hierarchy.
-5. Prefer concise, testable engineering statements over speculative architecture.
-6. Use **Brk-Trkr** as the canonical product name unless an implementation identifier must retain a historical name.
+Each translated language SHOULD mirror the English path structure so equivalent documents retain stable locations and cross-reference topology.
 
-## Canonical repositories
+```text
+docs/
+├── README.md
+└── i18n/
+    ├── en/
+    │   ├── README.md
+    │   ├── product/
+    │   ├── architecture/
+    │   └── development/
+    └── <language-code>/
+        ├── README.md
+        ├── product/
+        ├── architecture/
+        └── development/
+```
 
-- Documentation: `phpwalter/brk.trkr-docs`
-- Frontend: `phpwalter/brk.trkr-fe`
-- API: `phpwalter/brk.trkr-api`
-- Database: `phpwalter/brk.trkr-db`
+Documents use a stable `translation_key` in front matter. Translations should preserve that key even when filenames or headings are localized.
