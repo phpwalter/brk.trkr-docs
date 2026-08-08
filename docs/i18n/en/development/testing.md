@@ -23,6 +23,12 @@ Validate assumptions shared between frontend, API, and database layers. API sche
 ### End-to-end tests
 Cover critical user workflows such as authentication, catalog navigation, inventory updates, project allocation, address management, and other high-value flows.
 
+## Documentation CI
+
+Changes to the documentation corpus should pass the repository documentation checks before merge. The current blocking checks validate Markdown hygiene, documentation structure and index coverage, YAML front matter, internal links and anchors, and i18n identity/path rules. Spelling is advisory while the project dictionary is still being refined.
+
+The CI configuration is defined in `.github/workflows/docs-ci.yml`, with validation policy in `config/docs-schema.yaml` and implementation in `scripts/`.
+
 ## Regression testing
 
 When a defect is fixed, prefer a test that reproduces the failure before the fix. Historical debugging notes in the archive are useful sources for regression scenarios, especially around active/retired catalog filtering and route-driven state.
